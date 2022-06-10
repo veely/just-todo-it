@@ -1,0 +1,20 @@
+version: "3.9"
+
+services:
+  just-todo-it:
+    build:
+      context: .
+    ports:
+      - 8001:8001
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:8001
+  database:
+    image: postgres
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=just-todo-it
+    ports:
+      - '5432:5432'
