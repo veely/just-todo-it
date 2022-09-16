@@ -33,9 +33,9 @@ workflows:
     jobs:
       - build-and-test
       - aws-ecr/build-and-push-image:
-          aws-access-key-id: ${AWS_ACCESS_KEY_ID}
+          aws-access-key-id: $AWS_ACCESS_KEY_ID
           aws-cli-version: latest
-          aws-secret-access-key: ${AWS_ACCESS_SECRET}
+          aws-secret-access-key: $AWS_ACCESS_SECRET
           # context: myContext
           # create-repo: true
           executor: aws-ecr/default
@@ -46,8 +46,8 @@ workflows:
           # profile-name: myProfileName
           # public-registry: false
           # push-image: true
-          region: ${AWS_REGION}
-          registry-id: ${AWS_ECR_REGISTRY_ID}
+          region: $AWS_REGION
+          registry-id: $AWS_ECR_REGISTRY_ID
           repo: just-todoit
           repo-scan-on-push: true
           # role-arn: 'arn:aws:iam::123456789012:role/testing'
