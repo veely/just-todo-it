@@ -37,18 +37,18 @@ workflows:
           aws-cli-version: latest
           aws-secret-access-key: AWS_ACCESS_SECRET
           # context: myContext
-          create-repo: true
+          # create-repo: true
           executor: aws-ecr/default
           extra-build-args: "--compress"
           # new-profile-name: newProfileName
           # no-output-timeout: 20m
           platform: linux/amd64
           # profile-name: myProfileName
-          # public-registry: false
+          public-registry: true
           # push-image: true
           region: us-east-1 #AWS_REGION
           registry-id: AWS_ECR_REGISTRY_ID
-          repo: $CIRCLE_PROJECT_REPONAME
+          repo: just-todoit
           repo-scan-on-push: true
           # role-arn: 'arn:aws:iam::123456789012:role/testing'
           # skip-when-tags-exist: false
