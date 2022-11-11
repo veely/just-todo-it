@@ -53,4 +53,4 @@ workflows:
           # role-arn: 'arn:aws:iam::123456789012:role/testing'
           # skip-when-tags-exist: false
           # source-profile: sourceProfileName
-          # tag: 'latest,myECRRepoTag'
+          tag: 'latest,something-else'
