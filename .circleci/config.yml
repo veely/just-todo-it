@@ -55,6 +55,11 @@ workflows:
           # source-profile: sourceProfileName
           tag: 'latest,${CIRCLE_SHA1},${CIRCLE_PROJECT_REPONAME}'
 
+          # run only on master
+          filters:
+            branches:
+              only: main
+
 
 # How to not tag latest on PRs
 # 1. Create a new config.yml specifically for PRs and tag them differently
