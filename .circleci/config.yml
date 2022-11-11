@@ -53,4 +53,9 @@ workflows:
           # role-arn: 'arn:aws:iam::123456789012:role/testing'
           # skip-when-tags-exist: false
           # source-profile: sourceProfileName
-          tag: 'latest,something-else'
+          tag: 'latest,${CIRCLE_SHA1},${CIRCLE_PROJECT_REPONAME}'
+
+
+# How to not tag latest on PRs
+# 1. Create a new config.yml specifically for PRs and tag them differently
+# 2. Don't push PR/branches docker images to ECR
